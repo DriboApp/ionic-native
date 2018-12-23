@@ -89,6 +89,11 @@ export class AdMob extends IonicNativePlugin {
         return Promise.resolve();
     }
 
+    @Cordova({ otherPromise: true })
+    setDevMode(value: boolean): Promise<any> {
+        return Promise.resolve();
+    }
+
     on(event: string): Observable<any> {
         return fromEvent(document, event);
     }
