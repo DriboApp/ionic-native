@@ -306,4 +306,14 @@ export class Facebook extends IonicNativePlugin {
   getDeferredApplink(): Promise<string> {
     return;
   }
+
+  @Cordova()
+  setUserID(userID: string): Promise<any> {
+    return;
+  }
+
+  @Cordova()
+  updateUserProperties(params: Object): Promise<any> {
+    return;
+  }
 }
