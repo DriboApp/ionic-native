@@ -89,7 +89,7 @@ export interface FacebookLoginResponse {
  *
  * @usage
  * ```typescript
- * import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
+ * import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook/ngx';
  *
  * constructor(private fb: Facebook) { }
  *
@@ -304,6 +304,16 @@ export class Facebook extends IonicNativePlugin {
    */
   @Cordova()
   getDeferredApplink(): Promise<string> {
+    return;
+  }
+
+  @Cordova()
+  setUserID(userID: string): Promise<any> {
+    return;
+  }
+
+  @Cordova()
+  updateUserProperties(params: Object): Promise<any> {
     return;
   }
 }

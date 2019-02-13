@@ -5,8 +5,7 @@ import {
   IonicNativePlugin,
   Plugin
 } from '@ionic-native/core';
-import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Observer';
+import { Observable, Observer } from 'rxjs';
 
 declare const cordova: Cordova & { InAppBrowser: any };
 
@@ -31,7 +30,8 @@ export interface InAppBrowserOptions {
   /* (Android & Windows Phone Only) Set to yes to use the hardware back button to navigate backwards through the InAppBrowser's history.
    * If there is no previous page, the InAppBrowser will close. The default value is yes, so you must set it to no if you want the back button to simply close the InAppBrowser. */
   hardwareback?: 'yes' | 'no';
-  /** Set to yes to prevent HTML5 audio or video from autoplaying (defaults to no). */
+  /*
+   *  Set to yes to prevent HTML5 audio or video from autoplaying (defaults to no). */
   mediaPlaybackRequiresUserAction?: 'yes' | 'no';
   /* (Android) Set to yes to hide the navigation buttons on the location toolbar, only has effect if user has location set to yes. The default value is no.
    *  (iOS) Set to yes or no to turn the toolbar navigation buttons on or off (defaults to no). Only applicable if toolbar is not disabled.*/
@@ -71,7 +71,9 @@ export interface InAppBrowserOptions {
   transitionstyle?: 'fliphorizontal' | 'crossdissolve' | 'coververtical';
   /** (iOS Only) Set to top or bottom (default is bottom). Causes the toolbar to be at the top or bottom of the window. */
   toolbarposition?: 'top' | 'bottom';
-  /** (iOS Only) Set to yes or no to change the visibility of the loading indicator (defaults to no). */
+  /**
+   *  (iOS Only) Set to yes or no to change the visibility of the loading indicator (defaults to no).
+   */
   hidespinner?: 'yes' | 'no';
   /* (Windows only) Set to yes to create the browser control without a border around it.
    * Please note that if location=no is also specified, there will be no control presented to user to close IAB window. */
@@ -202,7 +204,7 @@ export class InAppBrowserObject {
  * @description Launches in app Browser
  * @usage
  * ```typescript
- * import { InAppBrowser } from '@ionic-native/in-app-browser';
+ * import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
  *
  * constructor(private iab: InAppBrowser) { }
  *
